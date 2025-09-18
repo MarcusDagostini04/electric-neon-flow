@@ -1,17 +1,16 @@
-import { NeonButton } from "./ui/neon-button"
-import { Shield, Clock, Award } from "lucide-react"
-import heroImage from "@/assets/hero-neon.jpg"
-
+import { NeonButton } from "./ui/neon-button";
+import { Shield, Clock, Award } from "lucide-react";
+import heroImage from "@/assets/hero-neon.jpg";
 const Hero = () => {
   const scrollToModules = () => {
-    const element = document.getElementById('modules')
+    const element = document.getElementById('modules');
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
-  }
-
-  return (
-    <section className="relative py-20 lg:py-32 overflow-hidden">
+  };
+  return <section className="relative py-20 lg:py-32 overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-dark"></div>
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-primary/10 rounded-full blur-3xl"></div>
@@ -33,19 +32,10 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <NeonButton 
-                variant="neon" 
-                size="xl"
-                onClick={() => window.open('https://hotmart.com/pt-br/marketplace/produtos/neon-para-eletricistas/G98352360L', '_blank', 'noopener')}
-                className="animate-pulse-neon"
-              >
+              <NeonButton variant="neon" size="xl" onClick={() => window.open('https://hotmart.com/pt-br/marketplace/produtos/neon-para-eletricistas/G98352360L', '_blank', 'noopener')} className="animate-pulse-neon">
                 Quero entrar agora
               </NeonButton>
-              <NeonButton 
-                variant="neon-outline" 
-                size="xl"
-                onClick={scrollToModules}
-              >
+              <NeonButton variant="neon-outline" size="xl" onClick={scrollToModules}>
                 Ver conteúdo do curso
               </NeonButton>
             </div>
@@ -73,18 +63,12 @@ const Hero = () => {
               {/* Neon frame effect */}
               <div className="absolute inset-0 bg-gradient-neon rounded-full opacity-20 blur-xl"></div>
               <div className="relative rounded-full overflow-hidden border-4 border-neon-primary shadow-neon-strong">
-                <img 
-                  src={heroImage}
-                  alt="Profissional trabalhando com luminosos de neon"
-                  className="w-full h-auto object-cover"
-                />
+                <img src={heroImage} alt="Profissional trabalhando com luminosos de neon" className="w-full h-auto object-cover" />
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  )
-}
-
-export default Hero
+    </section>;
+};
+export default Hero;
