@@ -2,10 +2,8 @@ import { NeonButton } from "./ui/neon-button";
 import { Shield, Play, CreditCard } from "lucide-react";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "./ui/dialog";
 import { useState } from "react";
-
 const Hero = () => {
   const [showVideo, setShowVideo] = useState(false);
-
   const scrollToPricing = () => {
     const element = document.getElementById('pricing');
     if (element) {
@@ -14,9 +12,7 @@ const Hero = () => {
       });
     }
   };
-
-  return (
-    <section className="relative py-20 lg:py-32 overflow-hidden">
+  return <section className="relative py-20 lg:py-32 overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-dark"></div>
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-primary/10 rounded-full blur-3xl"></div>
@@ -48,8 +44,7 @@ const Hero = () => {
               {/* Video container */}
               <div className="relative rounded-lg overflow-hidden border-4 border-neon-primary shadow-neon-strong bg-black/50">
                 <div className="aspect-video flex items-center justify-center">
-                  {!showVideo ? (
-                    <Dialog>
+                  {!showVideo ? <Dialog>
                       <DialogTrigger asChild>
                         <button className="group relative">
                           {/* Play button */}
@@ -66,28 +61,17 @@ const Hero = () => {
                             Este vídeo mostra tudo o que você vai aprender no curso para começar a faturar com luminosos de neon. Prepare-se para transformar sua carreira!
                           </DialogDescription>
                         </DialogHeader>
-                        <button
-                          onClick={() => setShowVideo(true)}
-                          className="w-full bg-neon-primary text-primary-foreground font-semibold py-3 px-6 rounded-lg hover:shadow-neon-strong transition-all duration-300"
-                        >
+                        <button onClick={() => setShowVideo(true)} className="w-full bg-neon-primary text-primary-foreground font-semibold py-3 px-6 rounded-lg hover:shadow-neon-strong transition-all duration-300">
                           Assistir agora
                         </button>
                       </DialogContent>
-                    </Dialog>
-                  ) : (
-                    <div className="w-full h-full">
+                    </Dialog> : <div className="w-full h-full">
                       {/* Placeholder for video - replace with actual video URL */}
-                      <video
-                        controls
-                        autoPlay
-                        className="w-full h-full"
-                        poster="/placeholder-video.jpg"
-                      >
+                      <video controls autoPlay className="w-full h-full" poster="/placeholder-video.jpg">
                         <source src="/video-placeholder.mp4" type="video/mp4" />
                         Seu navegador não suporta vídeos HTML5.
                       </video>
-                    </div>
-                  )}
+                    </div>}
                 </div>
               </div>
             </div>
@@ -100,18 +84,13 @@ const Hero = () => {
             </p>
             <p className="text-lg md:text-xl font-inter">
               <span className="text-muted-foreground line-through mr-3">De R$ 1.872,00</span>
-              <span className="text-[#FF3333] font-bold text-2xl md:text-3xl">
-                por apenas R$ 297,00 💥
-              </span>
+              <span className="text-[#FF3333] font-bold text-2xl md:text-3xl">por apenas R$ 187,00 💥</span>
             </p>
           </div>
 
           {/* Red Pulsing CTA Button */}
           <div className="mb-6 animate-bounce-in">
-            <button
-              onClick={scrollToPricing}
-              className="bg-[#FF3333] text-white font-montserrat font-bold text-lg md:text-xl px-8 md:px-12 py-4 md:py-5 rounded-lg shadow-[0_0_20px_rgba(255,51,51,0.5)] hover:shadow-[0_0_30px_rgba(255,51,51,0.8)] transition-all duration-300 animate-pulse-fast"
-            >
+            <button onClick={scrollToPricing} className="bg-[#FF3333] text-white font-montserrat font-bold text-lg md:text-xl px-8 md:px-12 py-4 md:py-5 rounded-lg shadow-[0_0_20px_rgba(255,51,51,0.5)] hover:shadow-[0_0_30px_rgba(255,51,51,0.8)] transition-all duration-300 animate-pulse-fast">
               QUERO GARANTIR MINHA VAGA AGORA!
             </button>
           </div>
@@ -137,8 +116,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
