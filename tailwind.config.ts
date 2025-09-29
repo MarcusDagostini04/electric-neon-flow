@@ -100,6 +100,14 @@ export default {
             boxShadow: "var(--glow-neon-strong)",
           },
         },
+        "pulse-fast": {
+          "0%, 100%": {
+            opacity: "1",
+          },
+          "50%": {
+            opacity: "0.7",
+          },
+        },
         "fade-in-up": {
           from: {
             opacity: "0",
@@ -142,6 +150,7 @@ export default {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "pulse-neon": "pulse-neon 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        "pulse-fast": "pulse-fast 1s cubic-bezier(0.4, 0, 0.6, 1) infinite",
         "fade-in-up": "fade-in-up 0.6s ease-out",
         "slide-in-right": "slide-in-right 0.5s ease-out",
         "bounce-in": "bounce-in 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)",

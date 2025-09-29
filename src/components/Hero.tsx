@@ -1,74 +1,144 @@
 import { NeonButton } from "./ui/neon-button";
-import { Shield, Clock, Award } from "lucide-react";
-import heroImage from "@/assets/hero-neon.jpg";
+import { Shield, Play, CreditCard } from "lucide-react";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "./ui/dialog";
+import { useState } from "react";
+
 const Hero = () => {
-  const scrollToModules = () => {
-    const element = document.getElementById('modules');
+  const [showVideo, setShowVideo] = useState(false);
+
+  const scrollToPricing = () => {
+    const element = document.getElementById('pricing');
     if (element) {
       element.scrollIntoView({
         behavior: 'smooth'
       });
     }
   };
-  return <section className="relative py-20 lg:py-32 overflow-hidden">
+
+  return (
+    <section className="relative py-20 lg:py-32 overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-dark"></div>
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-primary/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-secondary/10 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="text-center lg:text-left animate-fade-in-up">
-            <h1 className="font-montserrat font-bold text-4xl lg:text-6xl xl:text-7xl leading-tight mb-6">
-              <span className="neon-text">LUCRE COM</span><br />
-              <span className="text-foreground">LUMINOSOS</span><br />
-              <span className="neon-text">DE NEON</span>
-            </h1>
-            
-            <p className="text-xl lg:text-2xl text-foreground/80 mb-8 font-inter">
-              Domine instalação, manutenção e vendas mesmo começando do zero.
-            </p>
+        <div className="max-w-5xl mx-auto text-center">
+          {/* Small text above title */}
+          <div className="animate-fade-in-up mb-4">
+            <span className="text-neon-primary font-inter text-sm md:text-base">
+              Curso completo para iniciantes e avançados ⚡
+            </span>
+          </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <NeonButton variant="neon" size="xl" onClick={() => window.open('https://hotmart.com/pt-br/marketplace/produtos/neon-para-eletricistas/G98352360L', '_blank', 'noopener')} className="animate-pulse-neon">
-                Quero entrar agora
-              </NeonButton>
-              <NeonButton variant="neon-outline" size="xl" onClick={scrollToModules}>
-                Ver conteúdo do curso
-              </NeonButton>
-            </div>
+          {/* Main Title */}
+          <h1 className="font-montserrat font-bold text-3xl md:text-5xl lg:text-6xl leading-tight mb-12 animate-fade-in-up">
+            <span className="text-foreground">
+              Aprenda a instalar, reparar e vender luminosos de neon e transforme isso em uma{" "}
+            </span>
+            <span className="neon-text">fonte de renda real!</span>
+          </h1>
 
-            {/* Trust Seals */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-6">
-              <div className="flex items-center gap-2 bg-card/50 px-4 py-2 rounded-lg border border-neon-primary/20">
-                <Clock className="w-5 h-5 text-neon-primary" />
-                <span className="text-sm text-foreground/80">Acesso imediato</span>
-              </div>
-              <div className="flex items-center gap-2 bg-card/50 px-4 py-2 rounded-lg border border-neon-primary/20">
-                <Shield className="w-5 h-5 text-neon-primary" />
-                <span className="text-sm text-foreground/80">Suporte dedicado</span>
-              </div>
-              <div className="flex items-center gap-2 bg-card/50 px-4 py-2 rounded-lg border border-neon-primary/20">
-                <Award className="w-5 h-5 text-neon-primary" />
-                <span className="text-sm text-foreground/80">Certificado</span>
+          {/* Video Player with Neon Border */}
+          <div className="relative mb-8 animate-slide-in-right">
+            <div className="relative max-w-4xl mx-auto">
+              {/* Neon glow effect */}
+              <div className="absolute inset-0 bg-gradient-neon rounded-lg opacity-20 blur-xl"></div>
+              
+              {/* Video container */}
+              <div className="relative rounded-lg overflow-hidden border-4 border-neon-primary shadow-neon-strong bg-black/50">
+                <div className="aspect-video flex items-center justify-center">
+                  {!showVideo ? (
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <button className="group relative">
+                          {/* Play button */}
+                          <div className="w-20 h-20 md:w-24 md:h-24 rounded-full border-4 border-white bg-black/30 flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-neon">
+                            <Play className="w-10 h-10 md:w-12 md:h-12 text-white fill-white ml-1" />
+                          </div>
+                          <div className="absolute inset-0 rounded-full bg-neon-primary/20 blur-xl group-hover:bg-neon-primary/40 transition-all duration-300"></div>
+                        </button>
+                      </DialogTrigger>
+                      <DialogContent className="sm:max-w-md">
+                        <DialogHeader>
+                          <DialogTitle className="text-xl font-montserrat">Prepare-se para transformar sua carreira!</DialogTitle>
+                          <DialogDescription className="text-base pt-4">
+                            Este vídeo mostra tudo o que você vai aprender no curso para começar a faturar com luminosos de neon. Prepare-se para transformar sua carreira!
+                          </DialogDescription>
+                        </DialogHeader>
+                        <button
+                          onClick={() => setShowVideo(true)}
+                          className="w-full bg-neon-primary text-primary-foreground font-semibold py-3 px-6 rounded-lg hover:shadow-neon-strong transition-all duration-300"
+                        >
+                          Assistir agora
+                        </button>
+                      </DialogContent>
+                    </Dialog>
+                  ) : (
+                    <div className="w-full h-full">
+                      {/* Placeholder for video - replace with actual video URL */}
+                      <video
+                        controls
+                        autoPlay
+                        className="w-full h-full"
+                        poster="/placeholder-video.jpg"
+                      >
+                        <source src="/video-placeholder.mp4" type="video/mp4" />
+                        Seu navegador não suporta vídeos HTML5.
+                      </video>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Right Content - Image */}
-          <div className="relative animate-slide-in-right">
-            <div className="relative">
-              {/* Neon frame effect */}
-              <div className="absolute inset-0 bg-gradient-neon rounded-full opacity-20 blur-xl"></div>
-              <div className="relative rounded-full overflow-hidden border-4 border-neon-primary shadow-neon-strong">
-                <img src={heroImage} alt="Profissional trabalhando com luminosos de neon" className="w-full h-auto object-cover" />
-              </div>
+          {/* Offer Text */}
+          <div className="mb-8 animate-fade-in-up">
+            <p className="text-xl md:text-2xl font-inter mb-2">
+              🔥 <span className="text-foreground">Oferta por tempo limitado!</span>
+            </p>
+            <p className="text-lg md:text-xl font-inter">
+              <span className="text-muted-foreground line-through mr-3">De R$ 1.872,00</span>
+              <span className="text-[#FF3333] font-bold text-2xl md:text-3xl">
+                por apenas R$ 297,00 💥
+              </span>
+            </p>
+          </div>
+
+          {/* Red Pulsing CTA Button */}
+          <div className="mb-6 animate-bounce-in">
+            <button
+              onClick={scrollToPricing}
+              className="bg-[#FF3333] text-white font-montserrat font-bold text-lg md:text-xl px-8 md:px-12 py-4 md:py-5 rounded-lg shadow-[0_0_20px_rgba(255,51,51,0.5)] hover:shadow-[0_0_30px_rgba(255,51,51,0.8)] transition-all duration-300 animate-pulse-fast"
+            >
+              QUERO GARANTIR MINHA VAGA AGORA!
+            </button>
+          </div>
+
+          {/* Payment Icons */}
+          <div className="flex items-center justify-center gap-6 flex-wrap animate-fade-in-up">
+            <div className="flex items-center gap-2 text-muted-foreground hover:text-neon-primary transition-colors">
+              <Shield className="w-5 h-5" />
+              <span className="text-sm font-inter">Hotmart</span>
+            </div>
+            <div className="flex items-center gap-2 text-muted-foreground hover:text-neon-primary transition-colors">
+              <CreditCard className="w-5 h-5" />
+              <span className="text-sm font-inter">Pix</span>
+            </div>
+            <div className="flex items-center gap-2 text-muted-foreground hover:text-neon-primary transition-colors">
+              <CreditCard className="w-5 h-5" />
+              <span className="text-sm font-inter">Boleto</span>
+            </div>
+            <div className="flex items-center gap-2 text-muted-foreground hover:text-neon-primary transition-colors">
+              <CreditCard className="w-5 h-5" />
+              <span className="text-sm font-inter">Cartão</span>
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
