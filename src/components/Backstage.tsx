@@ -17,19 +17,19 @@ const Backstage = () => {
     {
       icon: DollarSign,
       title: "Comercial",
-      description: "Vendas, orçamento, fornecedores",
+      description: "Vendas, orçamento e fornecedores",
       details: "Estratégias de vendas e relacionamento com fornecedores"
     },
     {
       icon: Lightbulb,
       title: "Projeto",
-      description: "Design, materiais, LED x neon",
+      description: "Design, materiais, Neon x Led",
       details: "Criação de projetos e escolha dos melhores materiais"
     }
   ]
 
   return (
-    <section className="py-20 bg-gradient-card">
+    <section className="py-5 bg-gradient-card">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-montserrat font-bold text-3xl lg:text-5xl mb-6">
@@ -48,7 +48,7 @@ const Backstage = () => {
           </div>
 
           {/* Pillars arranged in circle */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 pt-16">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 pt-5">
             {pillars.map((pillar, index) => {
               const Icon = pillar.icon
               return (

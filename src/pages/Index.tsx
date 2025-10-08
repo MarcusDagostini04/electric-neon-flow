@@ -13,6 +13,8 @@ import FAQ from "@/components/FAQ"
 import LegalNotice from "@/components/LegalNotice"
 import Footer from "@/components/Footer"
 import FloatingCTA from "@/components/FloatingCTA"
+import WhatsAppButton from "@/components/WhatsAppButton"
+import MobileFloatingButton from "@/components/MobileFloatingButton"
 
 const Index = () => {
   return (
@@ -23,17 +25,16 @@ const Index = () => {
         <Hero />
         <Backstage />
         <ForWho />
-        <InstructorVideo />
         <Modules />
         <Testimonials />
-        <HowItWorks />
         <Pricing />
         <Instructor />
         <FAQ />
         <LegalNotice />
       </main>
       <Footer />
-      <FloatingCTA />
+      {/* Fixed elements */}
+      <WhatsAppButton />
     </div>
   );
 };

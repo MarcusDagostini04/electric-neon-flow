@@ -3,6 +3,14 @@ import { NeonButton } from "./ui/neon-button"
 import { ChevronDown } from "lucide-react"
 
 const FAQ = () => {
+  const scrollToPricing = () => {
+    const element = document.getElementById('pricing');
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  };
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   const faqs = [
@@ -19,10 +27,6 @@ const FAQ = () => {
       answer: "A maioria dos nossos alunos consegue fazer a primeira instalação na 2ª semana e o primeiro faturamento até o final do 1º mês. Tudo depende da sua dedicação e aplicação do conteúdo."
     },
     {
-      question: "Emito certificado?",
-      answer: "Sim! Ao concluir todos os módulos, você recebe um certificado de conclusão que pode usar para comprovar sua especialização junto aos clientes."
-    },
-    {
       question: "Como funciona a garantia?",
       answer: "Você tem 7 dias após a compra para testar todo o conteúdo. Se não ficar satisfeito por qualquer motivo, devolvemos 100% do seu investimento."
     }
@@ -33,7 +37,7 @@ const FAQ = () => {
   }
 
   return (
-    <section className="py-20 bg-gradient-card">
+    <section className="py-10 bg-gradient-card">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-montserrat font-bold text-3xl lg:text-5xl mb-6">
@@ -47,7 +51,7 @@ const FAQ = () => {
         <div className="max-w-3xl mx-auto">
           <div className="space-y-4 mb-12">
             {faqs.map((faq, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-card/50 backdrop-blur-sm rounded-xl border border-neon-primary/20 overflow-hidden animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -59,18 +63,16 @@ const FAQ = () => {
                   <h3 className="font-montserrat font-semibold text-lg text-foreground pr-4">
                     {faq.question}
                   </h3>
-                  <ChevronDown 
-                    className={`w-5 h-5 text-neon-primary transition-transform duration-300 flex-shrink-0 ${
-                      openIndex === index ? 'rotate-180' : ''
-                    }`}
+                  <ChevronDown
+                    className={`w-5 h-5 text-neon-primary transition-transform duration-300 flex-shrink-0 ${openIndex === index ? 'rotate-180' : ''
+                      }`}
                   />
                 </button>
 
-                <div className={`transition-all duration-300 ease-in-out ${
-                  openIndex === index 
-                    ? 'max-h-96 opacity-100' 
-                    : 'max-h-0 opacity-0'
-                } overflow-hidden`}>
+                <div className={`transition-all duration-300 ease-in-out ${openIndex === index
+                  ? 'max-h-96 opacity-100'
+                  : 'max-h-0 opacity-0'
+                  } overflow-hidden`}>
                   <div className="px-6 pb-6 pt-0">
                     <div className="bg-neon-primary/5 rounded-lg p-4 border-l-4 border-neon-primary">
                       <p className="text-foreground/80 leading-relaxed">
@@ -84,14 +86,11 @@ const FAQ = () => {
           </div>
 
           <div className="text-center">
-            <NeonButton 
-              variant="neon" 
-              size="xl"
-              onClick={() => window.open('https://hotmart.com/pt-br/marketplace/produtos/neon-para-eletricistas/G98352360L', '_blank', 'noopener')}
-              className="animate-pulse-neon"
-            >
-              Quero entrar agora
-            </NeonButton>
+            <div className="mb-6 animate-bounce-in">
+              <button onClick={scrollToPricing} className="bg-[#FF3333] text-white font-montserrat font-bold text-lg md:text-md px-8 md:px-12 py-4 md:py-5 rounded-lg transition-all duration-300 animate-pulse-fast">
+                Quero entrar agora!
+              </button>
+            </div>
           </div>
         </div>
       </div>

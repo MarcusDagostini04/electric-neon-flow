@@ -25,8 +25,8 @@ const InstructorVideo = () => {
               
               {/* Video overlay info */}
               <div className="absolute bottom-4 left-4 bg-black/70 backdrop-blur-sm rounded-lg p-3">
-                <p className="text-white text-sm font-medium">▶ Como transformei conhecimento em renda</p>
-                <p className="text-white/70 text-xs">5:30 min</p>
+                <p className="text-white text-sm font-medium">▶ Tudo que vai aprenser nesse curso!</p>
+                <p className="text-white/70 text-xs">0:36s</p>
               </div>
             </div>
 

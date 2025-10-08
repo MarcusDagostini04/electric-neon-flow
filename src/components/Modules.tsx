@@ -1,152 +1,147 @@
-import { NeonButton } from "./ui/neon-button"
-import { Shield, Wrench, Zap, MapPin, Settings, Calculator, Truck, Camera, Gift } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import {
+  PlayCircle,
+  Lightbulb,
+  Package,
+  Settings,
+  DollarSign,
+  ShoppingCart,
+  CheckCircle2
+} from "lucide-react";
 
 const Modules = () => {
+  const scrollToPricing = () => {
+    const element = document.getElementById('pricing');
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  };
   const modules = [
     {
       number: "M1",
-      title: "Fundamentos do neon",
-      description: "Segurança, EPI, normas",
-      icon: Shield,
-      result: "Trabalhe com total segurança"
+      title: "Boas vindas",
+      icon: PlayCircle,
+      topics: [
+        "Tudo que você vai aprender nesse curso",
+        "Quem é o Alexandre",
+      ]
     },
     {
-      number: "M2", 
-      title: "Ferramentas e materiais",
-      description: "Tudo que você precisa saber",
-      icon: Wrench,
-      result: "Compre certo e economize"
+      number: "M2",
+      title: "O Neon e o mercado",
+      icon: Lightbulb,
+      topics: [
+        "O que é o Neon",
+        "Como o neon é feito",
+        "Diferença entre Neon x Led",
+        "Neon: uma nova forma de obter renda"
+      ]
     },
     {
       number: "M3",
-      title: "Montagem, solda e testes",
-      description: "Técnicas práticas passo a passo",
-      icon: Zap,
-      result: "Domine as técnicas profissionais"
+      title: "Materiais",
+      icon: Package,
+      topics: [
+        "Materiais necessários para a instalação do Neon",
+        "Transformadores e suas especificações",
+        "Como montar sua maleta de atendimento",
+      ]
     },
     {
       number: "M4",
-      title: "Instalação em campo",
-      description: "Do projeto à entrega final",
-      icon: MapPin,
-      result: "Execute instalações perfeitas"
+      title: "Instalação & Manutenção",
+      icon: Settings,
+      topics: [
+        "Instalação do Neon",
+        "Cálculo da potência do transformador",
+        "Transformador x Alta voltagem",
+        "Manutenção do Neon",
+        "Manuseio e transporte do neon",
+        "O que fazer quando o neon não acende totalmente",
+        "Bônus: Guia completo do usuário"
+      ]
     },
     {
       number: "M5",
-      title: "Manutenção e diagnóstico",
-      description: "Resolva problemas rapidamente",
-      icon: Settings,
-      result: "Ofereça serviços de manutenção"
+      title: "Atendimento, orçamento e vendas",
+      icon: DollarSign,
+      topics: [
+        "Orçamento e visita técnica",
+        "Modelo de orçamento padrão",
+        "A importância de ter um laboratório parceiro (Lista dos fornecedores)",
+        "Meios de pagamento",
+        "Prazo de garantia"
+      ]
     },
     {
       number: "M6",
-      title: "Precificação e vendas",
-      description: "Como formar preços e vender",
-      icon: Calculator,
-      result: "Maximize seus lucros"
-    },
-    {
-      number: "M7",
-      title: "Fornecedores e logística",
-      description: "Onde comprar e como organizar",
-      icon: Truck,
-      result: "Tenha fornecedores confiáveis"
-    },
-    {
-      number: "M8",
-      title: "Portfólio e marketing",
-      description: "Atraia mais clientes localmente",
-      icon: Camera,
-      result: "Construa uma marca forte"
+      title: "Compras de acessórios e produtos",
+      icon: ShoppingCart,
+      topics: [
+        "Como comprar seus acessórios e produtos",
+    
+      ]
     }
-  ]
+  ];
 
   return (
-    <section id="modules" className="py-20">
-      <div className="container mx-auto px-4">
+    <section id="modulos" className="px-4 bg-background">
+      <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-montserrat font-bold text-3xl lg:text-5xl mb-6">
-            O que <span className="neon-text">você vai aprender</span>
+          <h2 className="text-3xl md:text-5xl font-montserrat font-bold mb-6">
+            O que você vai <span className="neon-text">aprender</span>
           </h2>
-          <p className="text-xl text-foreground/70 max-w-3xl mx-auto">
-            8 módulos completos + bônus exclusivos para transformar você em um especialista
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            6 módulos completos com todo conhecimento necessário para dominar o mercado de neon
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {modules.map((module, index) => {
-            const Icon = module.icon
+            const Icon = module.icon;
             return (
-              <div 
+              <div
                 key={index}
-                className="group bg-gradient-card rounded-xl p-6 border border-neon-primary/20 hover:border-neon-primary/40 transition-all duration-300 hover:shadow-neon animate-fade-in-up"
+                className="card-neon p-6 space-y-6 animate-fade-in-up hover:shadow-neon bg-gradient-card rounded-lg transition-all duration-300 mb-5"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-12 h-12 bg-gradient-neon rounded-lg flex items-center justify-center shadow-neon flex-shrink-0">
-                    <Icon className="w-6 h-6 text-primary-foreground" />
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-gradient-neon rounded-lg flex items-center justify-center shadow-neon">
+                    <Icon className="w-6 h-6 text-background" />
                   </div>
-                  <div className="bg-neon-primary/10 rounded-full px-3 py-1">
-                    <span className="text-neon-primary font-bold text-sm">{module.number}</span>
+                  <div>
+                    <div className="text-primary font-bold text-sm">{module.number}</div>
+                    <h3 className="text-lg font-montserrat font-bold text-foreground">
+                      {module.title}
+                    </h3>
                   </div>
                 </div>
 
-                <h3 className="font-montserrat font-bold text-lg mb-2 text-foreground">
-                  {module.title}
-                </h3>
-
-                <p className="text-foreground/60 text-sm mb-4">
-                  {module.description}
-                </p>
-
-                <div className="bg-neon-primary/5 rounded-lg p-3 border border-neon-primary/20">
-                  <p className="text-neon-primary text-sm font-medium flex items-center">
-                    <span className="w-2 h-2 bg-neon-primary rounded-full mr-2"></span>
-                    {module.result}
-                  </p>
-                </div>
+                <ul className="space-y-3">
+                  {module.topics.map((topic, topicIndex) => (
+                    <li key={topicIndex} className="flex items-start gap-3 text-sm">
+                      <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground leading-relaxed">{topic}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            )
+            );
           })}
         </div>
 
-        {/* Bonus Section */}
-        <div className="bg-gradient-neon rounded-xl p-8 text-center mb-12 shadow-neon-strong">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Gift className="w-8 h-8 text-primary-foreground" />
-            <h3 className="font-montserrat font-bold text-2xl text-primary-foreground">
-              Bônus Exclusivos
-            </h3>
-          </div>
-          <div className="grid md:grid-cols-3 gap-4 text-primary-foreground">
-            <div className="bg-primary-foreground/10 rounded-lg p-4">
-              <p className="font-semibold mb-1">Modelos de orçamento</p>
-              <p className="text-sm opacity-90">Templates profissionais prontos</p>
-            </div>
-            <div className="bg-primary-foreground/10 rounded-lg p-4">
-              <p className="font-semibold mb-1">Checklist completo</p>
-              <p className="text-sm opacity-90">Nunca esqueça nenhum detalhe</p>
-            </div>
-            <div className="bg-primary-foreground/10 rounded-lg p-4">
-              <p className="font-semibold mb-1">Contrato simples</p>
-              <p className="text-sm opacity-90">Proteja-se legalmente</p>
-            </div>
-          </div>
-        </div>
-
         <div className="text-center">
-          <NeonButton 
-            variant="neon" 
-            size="xl"
-            onClick={() => window.open('https://hotmart.com/pt-br/marketplace/produtos/neon-para-eletricistas/G98352360L', '_blank', 'noopener')}
-            className="animate-pulse-neon"
-          >
-            Quero entrar agora
-          </NeonButton>
+          <div className="mb-6 animate-bounce-in">
+            <button onClick={scrollToPricing} className="bg-[#FF3333] text-white font-montserrat font-bold text-lg md:text-md px-8 md:px-12 py-4 md:py-5 rounded-lg transition-all duration-300 animate-pulse-fast">
+              Quero entrar agora!
+            </button>
+          </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Modules
+export default Modules;

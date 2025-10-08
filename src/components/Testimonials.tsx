@@ -87,7 +87,7 @@ const Testimonials = () => {
           {/* Social Proof Badge */}
           <div className="flex items-center justify-center gap-2 bg-neon-primary/10 rounded-full px-6 py-3 inline-flex mb-8">
             <Users className="w-5 h-5 text-neon-primary" />
-            <span className="text-neon-primary font-semibold">+ de 1.200 alunos impactados</span>
+            <span className="text-neon-primary font-semibold">+ de 100 alunos impactados</span>
           </div>
         </div>
 

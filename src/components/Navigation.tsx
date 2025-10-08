@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NeonButton } from "./ui/neon-button";
 import { Menu, X } from "lucide-react";
+import logoImg from "@/assets/logo.jpg";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const scrollToSection = (sectionId: string) => {
@@ -17,10 +18,9 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-neon rounded-full shadow-neon flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">N</span>
+            <div className="w-8 h-8 rounded-full shadow-neon overflow-hidden">
+              <img src={logoImg} alt="Logo" className="w-full h-full object-cover" />
             </div>
-            
           </div>
 
           {/* Desktop Menu */}

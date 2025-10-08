@@ -1,4 +1,5 @@
 import { TrendingUp } from "lucide-react"
+import marcusImg from "@/assets/marcus-alexandre.png"
 
 const Instructor = () => {
   return (
@@ -9,16 +10,9 @@ const Instructor = () => {
             {/* Instructor Image */}
             <div className="relative animate-fade-in-up">
               <div className="relative">
-                {/* Photo placeholder with neon border */}
+                {/* Photo with neon border */}
                 <div className="aspect-square bg-gradient-dark rounded-2xl border-4 border-neon-primary shadow-neon-strong overflow-hidden relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-foreground/10 to-foreground/5 flex items-center justify-center">
-                    <div className="text-center text-foreground/60">
-                      <div className="w-24 h-24 bg-neon-primary/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <span className="text-4xl font-bold text-neon-primary">M</span>
-                      </div>
-                      <p>Foto do Instrutor</p>
-                    </div>
-                  </div>
+                  <img src={marcusImg} alt="Marcus Alexandre" className="absolute inset-0 w-full h-full object-cover" />
                 </div>
                 {/* Glow effect */}
                 <div className="absolute inset-0 bg-gradient-neon rounded-2xl opacity-20 blur-xl -z-10"></div>

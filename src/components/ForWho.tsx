@@ -2,6 +2,14 @@ import { NeonButton } from "./ui/neon-button"
 import { Zap, User, TrendingUp } from "lucide-react"
 
 const ForWho = () => {
+  const scrollToPricing = () => {
+    const element = document.getElementById('pricing');
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  };
   const profiles = [
     {
       icon: Zap,
@@ -39,7 +47,7 @@ const ForWho = () => {
           {profiles.map((profile, index) => {
             const Icon = profile.icon
             return (
-              <div 
+              <div
                 key={index}
                 className="group bg-gradient-card rounded-xl p-8 border border-neon-primary/20 hover:border-neon-primary/40 transition-all duration-300 hover:shadow-neon text-center animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.2}s` }}
@@ -47,7 +55,7 @@ const ForWho = () => {
                 <div className="w-20 h-20 bg-gradient-neon rounded-full flex items-center justify-center mx-auto mb-6 shadow-neon group-hover:shadow-neon-strong transition-all duration-300">
                   <Icon className="w-10 h-10 text-primary-foreground" />
                 </div>
-                
+
                 <div className="bg-neon-primary/10 rounded-lg py-2 px-4 mb-4 inline-block">
                   <span className="text-neon-primary font-semibold text-sm">
                     {profile.highlight}
@@ -67,13 +75,11 @@ const ForWho = () => {
         </div>
 
         <div className="text-center">
-          <NeonButton 
-            variant="neon-outline" 
-            size="xl"
-            onClick={() => window.open('https://hotmart.com/pt-br/marketplace/produtos/neon-para-eletricistas/G98352360L', '_blank', 'noopener')}
-          >
-            Começar hoje
-          </NeonButton>
+          <div className="mb-6 animate-bounce-in">
+            <button onClick={scrollToPricing} className="bg-[#FF3333] text-white font-montserrat font-bold text-lg md:text-md px-8 md:px-12 py-4 md:py-5 rounded-lg transition-all duration-300 animate-pulse-fast">
+              Começar Hoje
+            </button>
+          </div>
         </div>
       </div>
     </section>

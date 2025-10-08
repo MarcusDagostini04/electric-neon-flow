@@ -9,8 +9,10 @@
 @layer base {
   :root {
     /* Dark theme colors */
-    --background: 210 29% 5%; /* #0B0F14 */
-    --foreground: 180 15% 93%; /* #E7F2F2 */
+    --background: 210 29% 5%;
+    /* #0B0F14 */
+    --foreground: 180 15% 93%;
+    /* #E7F2F2 */
 
     /* Card and surfaces */
     --card: 210 25% 8%;
@@ -20,9 +22,12 @@
     --popover-foreground: 180 15% 93%;
 
     /* Neon accent colors */
-    --neon-primary: 163 100% 48%; /* #0EE7B7 */
-    --neon-secondary: 163 100% 50%; /* #00FFC6 */
-    --neon-blue: 200 100% 81%; /* #9AE6FF */
+    --neon-primary: 163 100% 48%;
+    /* #0EE7B7 */
+    --neon-secondary: 163 100% 50%;
+    /* #00FFC6 */
+    --neon-blue: 200 100% 81%;
+    /* #9AE6FF */
 
     /* Primary theme */
     --primary: 163 100% 48%;
@@ -55,7 +60,7 @@
     --gradient-neon: linear-gradient(135deg, hsl(163 100% 48%) 0%, hsl(163 100% 50%) 100%);
     --gradient-dark: linear-gradient(135deg, hsl(210 29% 5%) 0%, hsl(210 25% 8%) 100%);
     --gradient-card: linear-gradient(135deg, hsl(210 25% 8%) 0%, hsl(210 20% 10%) 100%);
-    
+
     /* Neon glow effects */
     --glow-neon: 0 0 20px hsl(163 100% 48% / 0.3), 0 0 40px hsl(163 100% 48% / 0.2);
     --glow-neon-strong: 0 0 20px hsl(163 100% 48% / 0.5), 0 0 40px hsl(163 100% 48% / 0.3), 0 0 60px hsl(163 100% 48% / 0.2);
@@ -135,12 +140,56 @@
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
   }
 }
 
 @layer components {
+
+  /* aliases para classes usadas nos componentes */
+  .bg-gradient-dark {
+    background-image: var(--gradient-dark);
+  }
+
+  .bg-gradient-neon {
+    background-image: var(--gradient-neon);
+  }
+
+  .bg-gradient-card {
+    background-image: var(--gradient-card);
+  }
+
+  /* sombras rápidas */
+  .shadow-neon {
+    box-shadow: var(--shadow-neon);
+  }
+
+  .shadow-neon-strong {
+    box-shadow: var(--shadow-neon-strong);
+  }
+
+  /* alias para o nome usado no componente */
+  .neon-text {
+    color: hsl(var(--primary));
+    text-shadow: var(--glow-text);
+  }
+
+  /* caso queira manter as animações via classe tailwind (já mapeadas no config) */
+  .animate-bounce-in {
+    animation: bounce-in .6s var(--transition-bounce, cubic-bezier(0.68, -0.55, 0.265, 1.55));
+  }
+
+  .animate-pulse-fast {
+    animation: pulse-fast .8s ease-in-out infinite;
+  }
+
+
   /* Neon glow effects */
   .neon-glow {
     box-shadow: var(--glow-neon);
@@ -172,6 +221,10 @@
   .animate-pulse-neon {
     animation: pulse-neon 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
+  /* Pulsar com escala e opacidade para CTA */
+  .animate-pulse-attention {
+    animation: pulse-attention 1.2s ease-in-out infinite;
+  }
 
   .animate-fade-in-up {
     animation: fade-in-up 0.6s ease-out;
@@ -194,6 +247,12 @@
     box-shadow: var(--glow-neon-strong);
   }
 
+  /* Pulse Animation for WhatsApp */
+  .pulse-whatsapp {
+    animation: pulse-whatsapp 2s ease-in-out infinite;
+  }
+  
+
   @media (min-width: 768px) {
     .floating-cta {
       display: none;
@@ -202,11 +261,38 @@
 }
 
 @keyframes pulse-neon {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: var(--glow-neon);
   }
+
   50% {
     box-shadow: var(--glow-neon-strong);
+  }
+}
+
+/* Pulso focado para chamar atenção (transform + opacity) */
+@keyframes pulse-attention {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 0.85;
+  }
+}
+
+@keyframes pulse-whatsapp {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 #25d366;
+  }
+
+  50% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
   }
 }
 
@@ -215,6 +301,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -226,6 +313,7 @@
     opacity: 0;
     transform: translateX(30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -237,15 +325,78 @@
     opacity: 0;
     transform: scale(0.3);
   }
+
   50% {
     opacity: 1;
     transform: scale(1.05);
   }
+
   70% {
     transform: scale(0.9);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
   }
+}
+
+/* ===== PRICING CARD ADD-ON (compat) ===== */
+@layer components {
+  /* Gradiente de texto que o card usa */
+  .text-gradient-neon {
+    background: var(--gradient-neon);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Botão neon usado no CTA */
+  .btn-neon {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius);
+    padding: 1rem 2rem;
+    font-weight: 700;
+    background: var(--gradient-neon);
+    box-shadow: var(--glow-neon);
+    transition: var(--transition-smooth);
+  }
+  .btn-neon:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--glow-neon-strong);
+  }
+
+  /* Card com glow (wrapper principal do pricing) */
+  .card-neon-glow {
+    border-radius: var(--radius);
+    background: var(--gradient-card);
+    border: 1px solid hsl(var(--border));
+    box-shadow: var(--shadow-card), var(--glow-neon);
+  }
+
+  /* Animação do botão flutuante (decorativa) */
+  @keyframes float {
+    0%,100% { transform: translateY(0) }
+    50% { transform: translateY(-8px) }
+  }
+  .floating-btn { animation: float 3s ease-in-out infinite; }
+}
+
+/* Utilitários semânticos usados no card (cores do tema via CSS vars) */
+@layer utilities {
+  .text-foreground { color: hsl(var(--foreground)); }
+  .text-muted-foreground { color: hsl(var(--muted-foreground)); }
+  .text-accent { color: hsl(var(--accent)); }
+  .text-primary { color: hsl(var(--primary)); }
+
+  /* BG com opacidade fracionada */
+  .bg-background\/5 { background-color: hsl(var(--background) / 0.05); }
+  .bg-background\/10 { background-color: hsl(var(--background) / 0.10); }
+  .bg-primary\/10 { background-color: hsl(var(--primary) / 0.10); }
+
+  /* Bordas com opacidade */
+  .border-primary\/10 { border-color: hsl(var(--primary) / 0.10); }
+  .border-primary\/20 { border-color: hsl(var(--primary) / 0.20); }
+  .border-primary\/30 { border-color: hsl(var(--primary) / 0.30); }
 }
