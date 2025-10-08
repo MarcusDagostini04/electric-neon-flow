@@ -24,7 +24,7 @@ const Pricing: React.FC = () => {
     },
     {
       icon: Zap,
-      title: "Mercado & oportunidades para eletricistas",
+      title: "Treinamento sobre mercado e oportunidades",
       value: "R$ 167,00",
     },
     {
@@ -34,7 +34,7 @@ const Pricing: React.FC = () => {
     },
     {
       icon: CheckCircle2,
-      title: "Instalação & manutenção (trafos, diagnóstico, transporte)",
+      title: "Instalação & Manutenção (trafos, diagnóstico, transporte)",
       value: "R$ 297,00",
     },
     {
@@ -44,7 +44,7 @@ const Pricing: React.FC = () => {
     },
     {
       icon: FileText,
-      title: "Modelos prontos (orçamento, checklists, contrato simples)",
+      title: "Checklists profissionais e documentos prontos",
       value: "R$ 197,00",
     },
     {
@@ -59,12 +59,12 @@ const Pricing: React.FC = () => {
     },
     {
       icon: Zap,
-      title: "Atualizações do curso",
+      title: "Lista nacional de fornecedores e laboratórios",
       value: "R$ 337,00",
     },
     {
       icon: Calendar,
-      title: "Acesso por 12 meses",
+      title: "Atualizações e acesso imediato",
       value: "R$ 137,00",
     },
   ];
@@ -141,12 +141,12 @@ const Pricing: React.FC = () => {
                     De <span className="line-through">R$ 1.872,00</span> por
                     apenas
                   </p>
-                  <div className="text-5xl md:text-6xl font-black font-montserrat neon">
-                    R$ 187
+                  <div className="text-3xl md:text-6xl font-black font-montserrat neon">
+                    R$ 187,00
                   </div>
                   <p className="text-xl text-foreground">
                     à vista ou{" "}
-                    <strong className="text-primary">12x de R$ 29,70</strong> no
+                    <strong className="text-primary">12x de R$ 19,34</strong> no
                     cartão
                   </p>
                 </div>

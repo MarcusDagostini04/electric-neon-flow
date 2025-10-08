@@ -1,5 +1,5 @@
 import { TrendingUp } from "lucide-react"
-import marcusImg from "@/assets/marcus-alexandre.png"
+import marcusImg from "@/assets/instrutor-03.png"
 
 const Instructor = () => {
   return (
