@@ -163,7 +163,7 @@ const Pricing: React.FC = () => {
                 <NeonButton
                   variant="neon"
                   size="xl"
-                  onClick={() => window.open('https://hotmart.com/pt-br/marketplace/produtos/neon-para-eletricistas/G98352360L', '_blank', 'noopener')}
+                  onClick={() => window.open('https://pay.hotmart.com/G98352360L', '_blank', 'noopener')}
                   className="w-full text-md animate-pulse-attention"
                 >
                   🚀Garantir minha vaga

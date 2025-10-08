@@ -28,23 +28,24 @@ const Instructor = () => {
 
               <div className="space-y-6 text-foreground/80 leading-relaxed">
                 <p>
-                  <strong className="text-neon-primary">Mais de 10 anos</strong> trabalhando com luminosos 
-                  de neon em projetos comerciais e residenciais de grande porte.
+                  <strong className="text-neon-primary">Mais de 35 anos</strong> trabalhando com luminosos 
+                  de neon em projetos artísticos, eventos, marcas famosas, obras comerciais e instalações personalizadas de alto impacto.
                 </p>
                 
                 <p>
-                  Responsável por <strong className="text-neon-primary">centenas de instalações</strong> 
-                  em estabelecimentos comerciais, casas noturnas, restaurantes e fachadas corporativas.
+                  Responsáveis por <strong className="text-neon-primary">milhares de cases de sucesso</strong>,
+                  trabalhos reconhecidos pela qualidade, durabilidade e acabamento impecável.
                 </p>
                 
                 <p>
-                  Especialista em segurança elétrica, normas técnicas e fornecedores nacionais 
-                  do setor de luminosos.
+                  Somos os <strong className="text-neon-primary">instrutores oficiais </strong>
+                   do curso, prontos para compartilhar toda nossa experiência, aprendizado e técnicas que realmente geram lucro com luminosos de neon.
                 </p>
 
                 <p>
-                  <strong className="text-neon-primary">Fundador</strong> de empresa especializada 
-                  em soluções de iluminação neon que faturou mais de R$ 2 milhões nos últimos 3 anos.
+                  Neste curso, reunimos <strong className="text-neon-primary">todos os segredos do ofício</strong>. 
+                  Acesso a checklists técnicos completos, formas de lucrar com neon, e uma lista 
+                  nacional de fornecedores e laboratórios de neon. Um material exclusivo que nunca foi revelado publicamente.
                 </p>
               </div>
 

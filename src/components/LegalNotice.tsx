@@ -20,7 +20,7 @@ const LegalNotice = () => {
               </div>
               <p className="text-foreground/70 text-sm leading-relaxed">
                 Trabalhos com neon envolvem alta tensão. É obrigatório o uso de EPIs adequados 
-                e seguir todas as normas de segurança elétrica. O curso ensina as medidas de proteção.
+                e seguir todas as normas de segurança elétrica.
               </p>
             </div>
 
@@ -40,22 +40,16 @@ const LegalNotice = () => {
                 <div className="w-8 h-8 bg-gradient-neon rounded-full flex items-center justify-center">
                   <span className="text-primary-foreground font-bold text-sm">VS</span>
                 </div>
-                <h3 className="font-montserrat font-bold text-lg">Neon vs LED</h3>
+                <h3 className="font-montserrat font-bold text-lg">Neon vs Led</h3>
               </div>
               <p className="text-foreground/70 text-sm leading-relaxed">
-                Ensinamos tanto técnicas de neon tradicional quanto LED neon, 
-                respeitando as aplicações específicas e preferências dos clientes.
+              No Módulo 2, revelamos a verdadeira diferença entre o Neon vs Led, 
+              Muitos acham que é a mesma coisa, mas cada tecnologia tem aplicações, luminosidade, durabilidade e custos completamente diferentes.
+              Algo que a maioria dos profissionais e até fornecedores desconhece.
               </p>
             </div>
           </div>
 
-          <div className="mt-8 bg-neon-primary/5 rounded-xl p-6 border border-neon-primary/20">
-            <p className="text-center text-foreground/80 text-sm leading-relaxed">
-              <strong className="text-neon-primary">Importante:</strong> Este curso é educacional. 
-              Para instalações em estabelecimentos comerciais, consulte sempre as normas locais 
-              e, quando necessário, um engenheiro eletricista responsável.
-            </p>
-          </div>
         </div>
       </div>
     </section>

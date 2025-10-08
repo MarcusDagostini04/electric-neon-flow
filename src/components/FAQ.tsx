@@ -20,7 +20,7 @@ const FAQ = () => {
     },
     {
       question: "Preciso de ferramentas caras?",
-      answer: "Não. No módulo 2, ensinamos exatamente quais ferramentas são essenciais e onde comprá-las pelo melhor preço. Você pode começar com um investimento baixo e ir aumentando conforme cresce."
+      answer: "Não. No módulo 3 e 6, ensinamos exatamente quais ferramentas são essenciais e onde comprá-las pelo melhor preço. Você pode começar com um investimento baixo e ir aumentando conforme cresce."
     },
     {
       question: "Em quanto tempo vejo resultados?",
