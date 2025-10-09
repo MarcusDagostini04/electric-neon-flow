@@ -28,17 +28,17 @@ const Instructor = () => {
 
               <div className="space-y-6 text-foreground/80 leading-relaxed">
                 <p>
-                  <strong className="text-neon-primary">Mais de 35 anos</strong> trabalhando com luminosos 
+                  <strong className="text-neon-primary">Mais de 30 anos</strong> trabalhando com luminosos 
                   de neon em projetos artísticos, eventos, marcas famosas, obras comerciais e instalações personalizadas de alto impacto.
                 </p>
                 
                 <p>
-                  Responsáveis por <strong className="text-neon-primary">milhares de cases de sucesso</strong>,
-                  trabalhos reconhecidos pela qualidade, durabilidade e acabamento impecável.
+                  Seja você um iniciante, empreendedor ou eletricista, aqui você aprende a <strong className="text-neon-primary">dominar o neon </strong>
+                  e transformar cada projeto em renda real.
                 </p>
                 
                 <p>
-                  Somos os <strong className="text-neon-primary">instrutores oficiais </strong>
+                   Somos os <strong className="text-neon-primary">instrutores oficiais </strong>
                    do curso, prontos para compartilhar toda nossa experiência, aprendizado e técnicas que realmente geram lucro com luminosos de neon.
                 </p>
 

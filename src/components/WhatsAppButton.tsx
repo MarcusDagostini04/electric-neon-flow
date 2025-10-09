@@ -2,7 +2,7 @@ import { MessageCircle } from "lucide-react";
 
 const WhatsAppButton = () => {
   const whatsappNumber = "5511964396533"; // (11) 96439-6533
-  const message = "Olá! Tenho dúvidas sobre o curso de Neon para Eletricistas.";
+  const message = "Olá! Quero saber mais sobre o curso de Neon.";
 
   const handleWhatsAppClick = () => {
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;

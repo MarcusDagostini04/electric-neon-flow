@@ -20,52 +20,52 @@ const Pricing: React.FC = () => {
     {
       icon: BookOpen,
       title: "Curso completo em vídeo (teórico e prático)",
-      value: "R$ 497,00",
+      value: "R$ 387,00",
     },
     {
       icon: Zap,
       title: "Treinamento sobre mercado e oportunidades",
-      value: "R$ 167,00",
+      value: "R$ 137,00",
     },
     {
       icon: FileText,
       title: "Guia de materiais, ferramentas e maleta",
-      value: "R$ 147,00",
+      value: "R$ 117,00",
     },
     {
       icon: CheckCircle2,
       title: "Instalação & Manutenção (trafos, diagnóstico, transporte)",
-      value: "R$ 297,00",
+      value: "R$ 237,00",
     },
     {
       icon: CreditCard,
       title: "Método de precificação, proposta e vendas",
-      value: "R$ 247,00",
+      value: "R$ 204,00",
     },
     {
       icon: FileText,
       title: "Checklists profissionais e documentos prontos",
-      value: "R$ 197,00",
+      value: "R$ 157,00",
     },
     {
       icon: HeadphonesIcon,
       title: "Suporte individual via WhatsApp",
-      value: "R$ 197,00",
+      value: "R$ 157/mês",
     },
     {
       icon: Users,
       title: "Grupo exclusivo de alunos / networking",
-      value: "R$ 147,00",
+      value: "R$ 117/mês",
     },
     {
       icon: Zap,
       title: "Lista nacional de fornecedores e laboratórios",
-      value: "R$ 337,00",
+      value: "R$ 217,00",
     },
     {
       icon: Calendar,
       title: "Atualizações e acesso imediato",
-      value: "R$ 137,00",
+      value: "R$ 142,00",
     },
   ];
 

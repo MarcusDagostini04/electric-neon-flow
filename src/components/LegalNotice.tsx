@@ -43,7 +43,7 @@ const LegalNotice = () => {
                 <h3 className="font-montserrat font-bold text-lg">Neon vs Led</h3>
               </div>
               <p className="text-foreground/70 text-sm leading-relaxed">
-              No Módulo 2, revelamos a verdadeira diferença entre o Neon vs Led, 
+              No Módulo 2, revelamos a verdadeira diferença entre o Neon vs Led. 
               Muitos acham que é a mesma coisa, mas cada tecnologia tem aplicações, luminosidade, durabilidade e custos completamente diferentes.
               Algo que a maioria dos profissionais e até fornecedores desconhece.
               </p>

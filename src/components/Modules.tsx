@@ -21,7 +21,7 @@ const Modules = () => {
   const modules = [
     {
       number: "M1",
-      title: "Boas vindas",
+      title: "Boas-Vindas",
       icon: PlayCircle,
       topics: [
         "Tudo que você vai aprender nesse curso",
@@ -30,11 +30,11 @@ const Modules = () => {
     },
     {
       number: "M2",
-      title: "O Neon e o mercado",
+      title: "O Universo do Neon e Suas Oportunidades",
       icon: Lightbulb,
       topics: [
         "O que é o Neon",
-        "Como o neon é feito",
+        "Como o Neon é feito",
         "Diferença entre Neon x Led",
         "Neon: uma nova forma de obter renda"
       ]
@@ -58,14 +58,14 @@ const Modules = () => {
         "Cálculo da potência do transformador",
         "Transformador x Alta voltagem",
         "Manutenção do Neon",
-        "Manuseio e transporte do neon",
-        "O que fazer quando o neon não acende totalmente",
+        "Manuseio e transporte do Neon",
+        "O que fazer quando o Neon não acende totalmente",
         "Bônus: Guia completo do usuário"
       ]
     },
     {
       number: "M5",
-      title: "Atendimento, orçamento e vendas",
+      title: "Atendimento, Orçamento e Vendas",
       icon: DollarSign,
       topics: [
         "Orçamento e visita técnica",
@@ -77,7 +77,7 @@ const Modules = () => {
     },
     {
       number: "M6",
-      title: "Compras de acessórios e produtos",
+      title: "Compras de Acessórios e Produtos",
       icon: ShoppingCart,
       topics: [
         "Como comprar seus acessórios e produtos",
