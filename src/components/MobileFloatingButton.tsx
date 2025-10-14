@@ -13,7 +13,7 @@ const MobileFloatingButton = () => {
         className="btn-neon w-full text-lg py-4 shadow-neon-strong floating-btn font-bold"
         onClick={() => window.open('https://pay.hotmart.com/G98352360L', '_blank', 'noopener')}
       >
-        🚀 Garantir minha vaga
+        🚀 Garantir vaga
       </Button>
     </div>
   );
