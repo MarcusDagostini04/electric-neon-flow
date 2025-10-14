@@ -123,8 +123,10 @@ const Pricing: React.FC = () => {
                     </div>
                   );
                 })}
-                <div id="pricing"></div>
+                
               </div>
+
+              <div id="pricing"></div>
 
               {/* Total value */}
               <div className="text-center border-t border-primary/20 pt-6">
@@ -164,9 +166,9 @@ const Pricing: React.FC = () => {
                   variant="neon"
                   size="xl"
                   onClick={() => window.open('https://pay.hotmart.com/G98352360L', '_blank', 'noopener')}
-                  className="w-full text-md animate-pulse-attention"
+                  className="w-full text-lg max-[500px]:text-sm animate-pulse-attention"
                 >
-                  🚀Garantir minha vaga
+                  🚀Garantir{"\u00A0"}<span className="max-[500px]:hidden">minha{"\u00A0"}</span>vaga
                 </NeonButton>
 
                 {/* Selos */}
