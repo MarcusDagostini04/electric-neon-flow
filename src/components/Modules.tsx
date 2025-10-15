@@ -30,7 +30,7 @@ const Modules = () => {
     },
     {
       number: "M2",
-      title: "O Universo do Neon e Suas Oportunidades",
+      title: "Neon e Oportunidades",
       icon: Lightbulb,
       topics: [
         "O que é o Neon",
@@ -109,7 +109,7 @@ const Modules = () => {
               >
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-gradient-neon rounded-lg flex items-center justify-center shadow-neon">
-                    <Icon className="w-6 h-6 text-background" />
+                    <Icon className="w-20 h-6 text-background" />
                   </div>
                   <div>
                     <div className="text-primary font-bold text-sm">{module.number}</div>
