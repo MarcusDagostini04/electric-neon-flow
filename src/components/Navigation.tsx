@@ -39,10 +39,7 @@ const Navigation = () => {
           <button onClick={() => scrollToSection('testimonials')} className="text-foreground/70 hover:text-neon-primary transition-colors">
             Depoimentos
           </button>
-          <button onClick = { scrollToPricing } className="text-foreground/70 hover:text-neon-primary transition-colors">
-            Preço
-          </button>
-          <NeonButton variant="neon" onClick={() => window.open('https://hotmart.com/pt-br/marketplace/produtos/neon-para-eletricistas/G98352360L', '_blank', 'noopener')}>
+          <NeonButton variant="neon" onClick={scrollToPricing}>
             Quero entrar agora
           </NeonButton>
         </div>
@@ -62,10 +59,7 @@ const Navigation = () => {
           <button onClick={() => scrollToSection('testimonials')} className="text-left text-foreground/70 hover:text-neon-primary transition-colors py-2">
             Depoimentos
           </button>
-          <button onClick={() => scrollToSection('pricing')} className="text-left text-foreground/70 hover:text-neon-primary transition-colors py-2">
-            Preço
-          </button>
-          <NeonButton variant="neon" size="lg" onClick={() => window.open('https://hotmart.com/pt-br/marketplace/produtos/neon-para-eletricistas/G98352360L', '_blank', 'noopener')} className="w-full">
+          <NeonButton variant="neon" size="lg" onClick={scrollToPricing} className="w-full">
             Quero entrar agora
           </NeonButton>
         </div>
