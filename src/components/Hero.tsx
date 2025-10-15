@@ -1,6 +1,6 @@
 import { Shield, CreditCard, VolumeX } from "lucide-react";
 import { useState, useRef } from "react";
-import heroPoster from "@/assets/hero-neon.jpg";
+import instrutor from "@/assets/seu-instrutor02.png"
 import cardsImg from "@/assets/cards.webp";
 const Hero = () => {
   const [showVideo, setShowVideo] = useState(true);
@@ -59,7 +59,7 @@ const Hero = () => {
                       loop
                       preload="metadata"
                       className="w-full h-full"
-                      poster={heroPoster}
+                      poster={instrutor}
                       onClick={(e) => {
                         e.preventDefault();
                         e.stopPropagation();
