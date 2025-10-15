@@ -156,7 +156,7 @@ const Pricing: React.FC = () => {
                 {/* Guarantee */}
                 <div className="flex items-center justify-center gap-2 text-accent">
                   <Shield className="w-6 h-6" />
-                  <span className="font-semibold">
+                  <span className="font-semibold text-sm">
                     Garantia de 7 dias
                   </span>
                 </div>
