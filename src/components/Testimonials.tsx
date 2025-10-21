@@ -9,14 +9,14 @@ const Testimonials = () => {
       name: "Carlos M.",
       profession: "Eletricista",
       photo: "C.M.",
-      text: "Em 3 meses já estava faturando R$ 5.000 extras por mês só com neon. O curso é muito prático!",
+      text: "Sempre quis trabalhar com neon, mas tinha medo de não saber fabricar. No curso entendi que posso ser o dono do negócio, vender o projeto e deixar a produção com fornecedores. Agora já estou atendendo arquitetos e eventos!",
       rating: 5
     },
     {
       name: "Ana Paula S.",
       profession: "Empreendedora",
       photo: "A.P.",
-      text: "Comecei do zero e hoje tenho minha própria empresa de luminosos. Mudou minha vida!",
+      text: "Achei que precisaria aprender a fabricar do zero, mas vi que o segredo está no negócio. Com o método do curso, comecei a vender e terceirizar a produção.",
       rating: 5
     },
     {
