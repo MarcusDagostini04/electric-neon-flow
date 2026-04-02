@@ -33,10 +33,11 @@ const Hero = () => {
 
         {/* Main Title */}
         <h1 className="font-montserrat font-bold text-3xl md:text-5xl lg:text-6xl leading-tight mb-12 animate-fade-in-up">
-          <span className="text-foreground">
-            Aprenda a instalar, reparar e vender luminosos de neon e transforme isso em uma{" "}
-          </span>
-          <span className="neon-text">fonte de renda real!</span>
+          <span className="text-foreground">Aprenda a {" "}</span>
+          <span className="neon-text">lucrar com neon</span>
+          <span className="text-foreground"> sem precisar fabricar, usando {" "}</span>
+          <span className="neon-text">fornecedores</span>
+          <span className="text-foreground"> e um método simples{" "}</span>
         </h1>
 
         {/* Video Player with Neon Border */}
