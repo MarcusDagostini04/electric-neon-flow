@@ -19,7 +19,6 @@ import MobileFloatingButton from "@/components/MobileFloatingButton"
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <TopStrip />
       <Navigation />
       <main>
         <Hero />
