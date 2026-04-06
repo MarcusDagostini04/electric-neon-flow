@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-neon-primary/20">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-foreground/60 text-sm">
-              © 2025 Neon Alexandre. Todos os direitos reservados.
+              © 2026 Neon Alexandre. Todos os direitos reservados.
             </p>
             <div className="text-foreground/60 text-sm text-center md:text-right">
               <p>Processamento seguro via Hotmart</p>
